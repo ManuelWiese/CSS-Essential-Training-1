@@ -8,6 +8,19 @@ Dark imperial blue: #003D5B
 
 body {
     background: #D1495B;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Caveat Brush', cursive;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 40px;
 }
 
 a {

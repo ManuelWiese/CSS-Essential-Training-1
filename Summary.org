@@ -113,3 +113,65 @@ There is a table, but at first better try it out.
 Specificity determines which css rule will take precedence. The selector with the higher specificity will be applied.
 
 id > class > type
+* Typefaces and CSS
+Use font-family to set the typeface.
+Use single or double quotes around font families with spaces in their names.
+* Web-Safe Fonts
+Fonts that are commonly preinstalled on computers or devices. Visit www.cssfontstack.com to gain an insight.
+
+* Using a Font Stack
+font-family accepts multiple arguments(comma separated) as fallback fonts. Choose similar looking fonts as fallback.
+Use a generic font family as the last option.(serif, sans serif, cursive, fantasy, monospace)
+
+* Web Fonts
+Option to use fonts not installed on the user computer.
+** Internal Font source
+Included font file in ypour project, declare and to font files using @font-face.
+
+@font-face {
+    font-family: 'Font Name';
+    src: url(font-file.ttf);
+}
+
+Warning: the path starts at the location of the css file.
+
+** External Font Source
+For example google fonts. Will be downloaded if needed.
+Google font will give you a link element, place this in the head of the document. The font will be usable in CSS.
+
+* Font size: px, em, rem
+
+Relative values are calculated bases on the nearest ancestor element.
+Absolute value are not affected by ancestor elements.
+
+px: absolute value in pixels, use whole numbers to prevent rounding errors, default size of body text is 16px
+em: named after letter "m", relative unit, 1em = inherited font-size -> Xem = X times inherited font-size
+rem: same as em, but realtive to the root element
+
+* font-weight
+Font-weigth is thickness or boldness of typefaces.
+Values range from 100 to 900, light to dark.
+** font-weight keywords
+normal = 400
+bold = 700
+lighter and bolder are relative to the inherited font-weight.
+
+* font-style
+Used to add or remove italic style, three values: italic, oblique, normal.
+
+* line-height
+height of the space between two lines of text.
+px, %, ems, rems or unitless. Relative values are relative to the font-size.
+
+* text-decoration
+overline, underline, line-through, none
+
+* text-transform
+capitalize, uppercase, lowercase, none
+
+* text-align
+Used to center align text, can be applied to the html element itself or the parent element. This style is inherited.
+
+* Adjusting the font-weight property
+The font-weight must be supported by the font itself, for example you can choose all the used weight in google font and add
+them to the header, this will increase the download size.
