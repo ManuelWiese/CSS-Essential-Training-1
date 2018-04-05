@@ -1,0 +1,35 @@
+/*
+Maximum yellow red: #EDAE49
+Dark terra cotta: #D1495B
+Metallic seaweed: #00798C
+B'dazzled blue: #30638E
+Dark imperial blue: #003D5B
+*/
+
+body {
+    background: #D1495B;
+}
+
+a {
+    color: #EDAE49;
+}
+a:hover {
+    text-decoration: none;
+}
+
+header, footer {
+    color: #D1495B;
+    background: #003D5B;
+}
+
+header h1, header h2 {
+    color: #EDAE49;
+}
+
+.work {
+    background: #30638E;
+}
+
+.education {
+    background: #00798C;
+}

@@ -1,0 +1,115 @@
+As a backend/ai developer i don't know much about the web, so here we go!
+
+* External CSS
+the type keyword is not needed in html5 anymore. Use
+<link rel="stylesheet" href="style.css">
+
+* Inline CSS
+use the style keyword on any html tag.
+Don't use it ;-)
+
+* Internal CSS
+Use the <style> tag in the <head> element and write down your css there.
+Internal CSS can overwrite the external if used AFTER the <link...> element.
+I don't think there are many cases where you need it.
+
+* Naming conventions
+** use index.html as main page
+** Use lowercase letters
+** Don't use spaces or symbols, seperate words by using a _ or -(- are better for SEO)
+** Use this convention for everything(folders, files, ...)
+
+* Syntax
+** Selectors determine which HTML element to apply styles to
+** Declaration blocks consists of one or more styles rules(in curly braces)
+** Declarations are style rules -> property: value;
+** Example
+h1 {
+    color: green;
+}
+
+* Type selector
+Match the HTML by using the element name. The example above will color all h1 elements green.
+
+* Class selector
+<tag class="className">...</tag>
+You can define "className", spaces indicate you are using multiple classes: class="a b" means this element 
+uses class a and class b.
+The same class can be used multiple times.
+
+To select in css use the .className notation.
+To select multiple classes use .a.b 
+
+* ID selector
+<tag id="myID">...</tag>
+You can define "myID", ids can only be used once per page!
+
+To select use the #myID notation.
+
+* Descendent Selectors
+Use multiple selectors, separated by a space, to match the descendant elements.
+** Example
+HTML:
+<p>This is my paragraph containing a <a href="nothing_to_see_here">link</a></p>
+CSS:
+p a {
+    ...
+}
+
+This will select anchor elements inside a paragraph. Warning: a can be contained in multiple elements inside
+p, but still will be selected.
+
+* Grouping Multiple Selectors
+h1, h2, h3 {
+    color: red;
+}
+
+will select h1, h2 and h3 elements. This reduces the number of declarations in the css file.
+
+* Pseudo-Class Selectors
+
+Pseudo-class selectors specifiy the state of the element.
+Keywords are combined with another selector, using a colon.
+
+** Example
+a:hover {
+    color: black;
+}
+
+This will select a elements if the mouse hovers over them.
+
+* Comments
+
+c-style comments, but only /* ... */ it seems.
+
+* CSS Color Values
+** actual name
+color: black;
+** hex code
+color: #FFFFFF;
+** RGB
+color: rgb(255, 255, 0);
+
+cool palette generator at https://coolors.co 
+
+* Cascading Style Sheets
+CSS rules cascade and are executed from top to bottom.
+** Example
+h1 {
+    color: red;
+}
+h1 {
+    color: blue;
+}
+
+This will overwrite the first declaration.
+
+* Inheritance
+Styles can be inherited from ancestor to descendant elements. But not all elements inherit all properties.
+There is a table, but at first better try it out.
+
+* Specificity
+
+Specificity determines which css rule will take precedence. The selector with the higher specificity will be applied.
+
+id > class > type
